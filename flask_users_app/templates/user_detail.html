@@ -1,0 +1,11 @@
+
+{% extends 'base.html' %}
+{% block content %}
+  <h2>User #{{ user.id }}</h2>
+  <ul class="list-group">
+    <li class="list-group-item"><strong>Name:</strong> {{ user.name }}</li>
+    <li class="list-group-item"><strong>Email:</strong> {{ user.email }}</li>
+    <li class="list-group-item"><strong>Role:</strong> {{ user.role }}</li>
+  </ul>
+  <a href="{{ url_for('list_users') }}" class="btn btn-link mt-3">← Back to users</a>
+{% endblock %}
